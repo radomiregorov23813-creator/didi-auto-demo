@@ -21,14 +21,19 @@
     <span class="brand-mark" aria-hidden="true">DI</span>
     <span class="brand-name">Di-Di Auto</span>
   </a>
+  <a class="btn btn-wa btn-small" data-wa="Здравствуйте! Хочу авто под заказ, подскажите с чего начать." href="#">Написать в WhatsApp</a>
   <nav class="nav" aria-label="Разделы">
     <a href="#podbor">Подбор</a>
-    <a href="#put">Как везём</a>
+    <a href="#strany">Япония или Китай</a>
+    <a href="#katalog">Каталог</a>
+    <a href="#put">Этапы</a>
     <a href="#calc">Калькулятор</a>
+    <a href="#list">Аукционный лист</a>
     <a href="#privezli">Привезли</a>
+    <a href="#dokumenty">Документы</a>
     <a href="#voprosy">Вопросы</a>
+    <a href="#kontakty">Контакты</a>
   </nav>
-  <a class="btn btn-wa btn-small" data-wa="Здравствуйте! Хочу авто под заказ, подскажите с чего начать." href="#">Написать в WhatsApp</a>
 </header>
 
 <main id="start">
@@ -53,8 +58,8 @@
       <div class="field">
         <label for="budget">Бюджет с доставкой в Якутск</label>
         <output id="budgetOut" for="budget">2 500 000 ₽</output>
-        <input id="budget" type="range" min="1500000" max="5000000" step="50000" value="2500000">
-        <div class="range-ends"><span>1,5 млн</span><span>5 млн</span></div>
+        <input id="budget" type="range" min="1200000" max="5000000" step="50000" value="2500000">
+        <div class="range-ends"><span>1,2 млн</span><span>5 млн</span></div>
       </div>
 
       <div class="field">
@@ -83,17 +88,64 @@
     </div>
   </section>
 
+  <section class="block" id="strany">
+    <div class="wrap">
+      <h2>Япония или Китай</h2>
+      <p class="section-lead">Везём из обеих стран. Какая подойдёт вам, зависит от того, что важнее: проверенная история машины или левый руль и свежий год.</p>
+      <div class="compare">
+        <article class="sheet country">
+          <div class="sheet-head"><h3>Япония</h3><span class="country-tag">правый руль</span></div>
+          <dl>
+            <div><dt>Где покупаем</dt><dd>На аукционах. У каждой машины есть лист с оценкой эксперта.</dd></div>
+            <div><dt>Что берут чаще</dt><dd>Гибриды и кроссоверы Toyota, Honda, Subaru, Mazda возрастом 3–5 лет.</dd></div>
+            <div><dt>Сильная сторона</dt><dd>Честный пробег и понятное состояние: всё записано в аукционном листе.</dd></div>
+            <div><dt>Как едет</dt><dd>Морем до Владивостока, дальше автовозом или своим ходом.</dd></div>
+            <div><dt>Срок</dt><dd>35–50 дней</dd></div>
+          </dl>
+        </article>
+        <article class="sheet country">
+          <div class="sheet-head"><h3>Китай</h3><span class="country-tag">левый руль</span></div>
+          <dl>
+            <div><dt>Где покупаем</dt><dd>У дилеров и на площадках подержанных авто, с осмотром перед покупкой.</dd></div>
+            <div><dt>Что берут чаще</dt><dd>Свежие машины 1–3 лет: китайские марки и модели Toyota, Honda, Mazda местной сборки.</dd></div>
+            <div><dt>Сильная сторона</dt><dd>Левый руль, богатая комплектация и почти новая машина за те же деньги.</dd></div>
+            <div><dt>Как едет</dt><dd>Автовозом через сухопутную границу, дальше по России до Якутска.</dd></div>
+            <div><dt>Срок</dt><dd>30–45 дней</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block block-paper" id="katalog">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>Что везём чаще всего</h2>
+          <p class="section-lead">Цена — предварительный расчёт под ключ в Якутске по сегодняшнему курсу. Нажмите «Посчитать», чтобы увидеть, из чего она складывается.</p>
+        </div>
+        <div class="chips" role="group" aria-label="Фильтр каталога" data-catalog="from">
+          <button type="button" class="chip is-on" data-v="any" aria-pressed="true">Все</button>
+          <button type="button" class="chip" data-v="jp" aria-pressed="false">Япония</button>
+          <button type="button" class="chip" data-v="cn" aria-pressed="false">Китай</button>
+        </div>
+      </div>
+      <div class="catalog" id="catalog"></div>
+      <p class="catalog-note">Нужной модели нет в списке? Привезём любую — <a data-wa="Здравствуйте! Интересует модель, которой нет в каталоге на сайте: " href="#">напишите марку и год</a>.</p>
+    </div>
+  </section>
+
   <section class="route" id="put">
     <div class="wrap">
       <h2>Путь машины до вашего двора</h2>
       <p class="section-lead">От заявки до выдачи — примерно 35–50 дней. На каждом этапе менеджер пишет вам в WhatsApp, где сейчас машина.</p>
       <ol class="stops">
-        <li><span class="stop-days">1 день</span><h3>Заявка и договор</h3><p>Обсуждаем бюджет и пожелания, подписываем договор в офисе.</p></li>
-        <li><span class="stop-days">3–10 дней</span><h3>Поиск и покупка</h3><p>Присылаем лоты с переводом аукционного листа. Покупаем после вашего «да».</p></li>
-        <li><span class="stop-days">7–14 дней</span><h3>Порт и море</h3><p>Машина едет в порт и уходит судном во Владивосток.</p></li>
-        <li><span class="stop-days">5–10 дней</span><h3>Таможня</h3><p>Пошлина, утильсбор, СБКТС и электронный ПТС.</p></li>
-        <li><span class="stop-days">7–12 дней</span><h3>Дорога в Якутск</h3><p>Автовоз или перегон из Владивостока до Якутска.</p></li>
-        <li class="stop-end"><span class="stop-days">день выдачи</span><h3>Ключи у вас</h3><p>Осматриваете машину и забираете с полным пакетом документов.</p></li>
+        <li><span class="stop-days">1 день</span><h3>Заявка и договор</h3><p>Обсуждаем бюджет и пожелания, подписываем договор в офисе.</p><p class="stop-get">Вам: договор и расчёт</p></li>
+        <li><span class="stop-days">3–10 дней</span><h3>Поиск и покупка</h3><p>Присылаем лоты с переводом аукционного листа. Покупаем после вашего «да».</p><p class="stop-get">Вам: фото и лист лота</p></li>
+        <li><span class="stop-days">7–14 дней</span><h3>Отправка</h3><p>Из Японии — морем во Владивосток. Из Китая — автовозом через границу.</p><p class="stop-get">Вам: фото из порта</p></li>
+        <li><span class="stop-days">5–10 дней</span><h3>Таможня</h3><p>Пошлина, утильсбор, СБКТС и электронный ПТС.</p><p class="stop-get">Вам: чеки платежей</p></li>
+        <li><span class="stop-days">7–12 дней</span><h3>Дорога в Якутск</h3><p>Автовоз или перегон из Владивостока до Якутска.</p><p class="stop-get">Вам: где машина сейчас</p></li>
+        <li class="stop-end"><span class="stop-days">день выдачи</span><h3>Ключи у вас</h3><p>Осматриваете машину и забираете с полным пакетом документов.</p><p class="stop-get">Вам: машина и документы</p></li>
       </ol>
     </div>
   </section>
@@ -132,10 +184,32 @@
             </div>
           </div>
           <p class="rates" id="rates">Курс: загружаем…</p>
+
+          <div class="includes">
+            <div>
+              <h3>Входит в расчёт</h3>
+              <ul>
+                <li>Машина и расходы в стране покупки</li>
+                <li>Доставка до Владивостока</li>
+                <li>Пошлина, таможенный сбор, утильсбор</li>
+                <li>СБКТС, электронный ПТС, услуги брокера</li>
+                <li>Доставка до Якутска</li>
+                <li>Комиссия Di-Di Auto</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Оплачивается отдельно</h3>
+              <ul>
+                <li>Постановка на учёт в ГАИ</li>
+                <li>ОСАГО</li>
+                <li>Зимняя резина и допоборудование — по желанию</li>
+              </ul>
+            </div>
+          </div>
         </form>
 
         <div class="sheet receipt" aria-live="polite">
-          <div class="sheet-head"><h3>Расчёт</h3></div>
+          <div class="sheet-head"><h3 id="receiptTitle">Расчёт</h3></div>
           <dl id="receipt"></dl>
           <div class="total">
             <span>Итого в Якутске</span>
@@ -148,11 +222,58 @@
     </div>
   </section>
 
-  <section class="done" id="privezli">
+  <section class="block block-paper" id="list">
+    <div class="wrap grades-grid">
+      <div>
+        <h2>Как читать аукционный лист</h2>
+        <p class="section-lead">В Японии каждую машину перед торгами осматривает эксперт аукциона и ставит оценку. Мы переводим лист и объясняем каждую пометку до того, как вы решите покупать.</p>
+        <dl class="marks">
+          <div><dt>A1–A3</dt><dd>Царапины, от едва заметной до крупной</dd></div>
+          <div><dt>U1–U3</dt><dd>Вмятины</dd></div>
+          <div><dt>W1–W3</dt><dd>Следы покраски или ремонта</dd></div>
+          <div><dt>XX</dt><dd>Деталь меняли</dd></div>
+          <div><dt>Салон A–D</dt><dd>От идеального до сильно изношенного</dd></div>
+        </dl>
+      </div>
+      <div class="sheet grades">
+        <div class="sheet-head"><h3>Оценка кузова</h3></div>
+        <table>
+          <tbody>
+            <tr><th scope="row">S, 6, 5</th><td>Новая или почти новая, без дефектов</td></tr>
+            <tr class="is-pick"><th scope="row">4.5</th><td>Отличное состояние, мелочи видны только вблизи</td></tr>
+            <tr class="is-pick"><th scope="row">4</th><td>Хорошее состояние, небольшие царапины и сколы</td></tr>
+            <tr><th scope="row">3.5</th><td>Заметные царапины и вмятины, возможен мелкий ремонт</td></tr>
+            <tr><th scope="row">3</th><td>Много дефектов, нужна покраска или ремонт</td></tr>
+            <tr><th scope="row">R, RA</th><td>Машина была в ДТП и восстановлена</td></tr>
+          </tbody>
+        </table>
+        <p class="grades-note">Чаще всего советуем 4 и 4.5: состояние хорошее, а цена ниже, чем у пятёрок.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="privezli">
     <div class="wrap">
       <h2>Уже в Якутске</h2>
       <p class="section-lead">Примеры карточек. На рабочем сайте здесь будут ваши машины из Instagram — с фото выдачи, сроком и итоговой ценой.</p>
       <div class="cases" id="cases"></div>
+    </div>
+  </section>
+
+  <section class="block block-ink" id="dokumenty">
+    <div class="wrap docs-grid">
+      <div>
+        <h2>Что вы получаете вместе с машиной</h2>
+        <p class="section-lead">С этим пакетом машину ставят на учёт в ГАИ Якутска. На регистрацию по закону даётся 10 дней.</p>
+      </div>
+      <ul class="docs">
+        <li><b>Договор</b>С суммой комиссии и порядком оплаты</li>
+        <li><b>Электронный ПТС</b>Выписка из ЭПТС на ваше имя</li>
+        <li><b>СБКТС</b>Свидетельство о безопасности конструкции</li>
+        <li><b>Таможенный ордер</b>Подтверждает уплату пошлины</li>
+        <li><b>Чек утильсбора</b>Без него машину не зарегистрируют</li>
+        <li><b>Аукционный лист</b>Оригинал и перевод на русский</li>
+      </ul>
     </div>
   </section>
 
@@ -172,6 +293,10 @@
           <p>Для машин до 160 л.с. и до 3 литров утильсбор льготный — 3 400 или 5 200 ₽. Если мощность выше, сбор считается по коммерческой ставке и добавляет к цене сотни тысяч рублей. Калькулятор выше учитывает это сам.</p>
         </details>
         <details>
+          <summary>Какой возраст машины выгоднее?</summary>
+          <p>От 3 до 5 лет. У таких машин самая низкая пошлина: она считается только от объёма двигателя. У машин младше 3 лет пошлина зависит от цены, а у машин старше 5 лет ставка за кубический сантиметр почти вдвое выше.</p>
+        </details>
+        <details>
           <summary>Как и когда платить?</summary>
           <p>Поэтапно: предоплата перед торгами, оплата машины после покупки, таможенные платежи — когда машина придёт во Владивосток. На каждый платёж вы получаете подтверждающие документы.</p>
         </details>
@@ -180,8 +305,16 @@
           <p>До покупки переводим аукционный лист: оценка кузова и салона, пробег, замечания эксперта. Покупаем только после того, как вы согласуете конкретный лот.</p>
         </details>
         <details>
+          <summary>Правый руль можно ставить на учёт?</summary>
+          <p>Да. Машины с правым рулём регистрируют в ГАИ на общих основаниях, ограничений для личных автомобилей нет.</p>
+        </details>
+        <details>
           <summary>Сколько ждать?</summary>
           <p>Обычно 35–50 дней от договора до выдачи. Зимой дорога из Владивостока может занять на несколько дней больше.</p>
+        </details>
+        <details>
+          <summary>Можно следить, где машина?</summary>
+          <p>Да. Менеджер пишет в WhatsApp на каждом этапе: покупка, отправка, прибытие во Владивосток, таможня, выезд в Якутск.</p>
         </details>
       </div>
     </div>
