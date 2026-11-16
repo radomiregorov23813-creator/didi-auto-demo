@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Di-Di Auto — авто из Японии и Китая под ключ в Якутск</title>
+<meta name="description" content="Подбор, выкуп и доставка автомобилей из Японии и Китая в Якутск. Посчитайте полную стоимость с таможней и доставкой.">
+<meta name="theme-color" content="#E9EFF2">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<p class="demo-strip">Демо-версия сайта для Di-Di Auto. Цены, сроки и фото примерные — заменим на ваши.</p>
+
+<header class="top">
+  <a class="brand" href="#start" aria-label="Di-Di Auto, в начало">
+    <span class="brand-mark" aria-hidden="true">DI</span>
+    <span class="brand-name">Di-Di Auto</span>
+  </a>
+  <nav class="nav" aria-label="Разделы">
+    <a href="#podbor">Подбор</a>
+    <a href="#put">Как везём</a>
+    <a href="#calc">Калькулятор</a>
+    <a href="#privezli">Привезли</a>
+    <a href="#voprosy">Вопросы</a>
+  </nav>
+  <a class="btn btn-wa btn-small" data-wa="Здравствуйте! Хочу авто под заказ, подскажите с чего начать." href="#">Написать в WhatsApp</a>
+</header>
+
+<main id="start">
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Авто из Японии и&nbsp;Китая под&nbsp;ключ в&nbsp;Якутск</h1>
+      <p class="lead">Назовите бюджет — покажем, что за эти деньги реально привезти. В&nbsp;цене уже таможня, оформление и дорога до Якутска.</p>
+      <ul class="facts">
+        <li><b>Офис в Якутске</b>203 микрорайон, корпус 21. Договор подписываем лично.</li>
+        <li><b>Япония и Китай</b>Аукционы, дилеры и проверка машины до покупки.</li>
+        <li><b>21,9 тыс. подписчиков</b>Каждую привезённую машину показываем в Instagram.</li>
+      </ul>
+    </div>
+
+    <div class="sheet picker" id="podbor">
+      <div class="sheet-head">
+        <h2>Подбор под бюджет</h2>
+        <span class="stamp" aria-hidden="true">под<br>ключ</span>
+      </div>
+
+      <div class="field">
+        <label for="budget">Бюджет с доставкой в Якутск</label>
+        <output id="budgetOut" for="budget">2 500 000 ₽</output>
+        <input id="budget" type="range" min="1500000" max="5000000" step="50000" value="2500000">
+        <div class="range-ends"><span>1,5 млн</span><span>5 млн</span></div>
+      </div>
+
+      <div class="field">
+        <span class="field-label" id="typeLabel">Кузов</span>
+        <div class="chips" role="group" aria-labelledby="typeLabel" data-filter="type">
+          <button type="button" class="chip is-on" data-v="any" aria-pressed="true">Любой</button>
+          <button type="button" class="chip" data-v="suv" aria-pressed="false">Кроссовер</button>
+          <button type="button" class="chip" data-v="van" aria-pressed="false">Минивэн</button>
+          <button type="button" class="chip" data-v="car" aria-pressed="false">Седан, хэтчбек</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field-label" id="fromLabel">Откуда</span>
+        <div class="chips" role="group" aria-labelledby="fromLabel" data-filter="from">
+          <button type="button" class="chip is-on" data-v="any" aria-pressed="true">Не важно</button>
+          <button type="button" class="chip" data-v="jp" aria-pressed="false">Япония</button>
+          <button type="button" class="chip" data-v="cn" aria-pressed="false">Китай</button>
+        </div>
+      </div>
+
+      <div class="picks" id="picks" aria-live="polite"></div>
+
+      <a class="btn btn-wa btn-wide" id="pickSend" href="#">Отправить подбор в WhatsApp</a>
+      <p class="hint">Менеджер получит ваш бюджет и выбранные параметры и пришлёт свежие лоты.</p>
+    </div>
+  </section>
+
+  <section class="route" id="put">
+    <div class="wrap">
+      <h2>Путь машины до вашего двора</h2>
+      <p class="section-lead">От заявки до выдачи — примерно 35–50 дней. На каждом этапе менеджер пишет вам в WhatsApp, где сейчас машина.</p>
+      <ol class="stops">
+        <li><span class="stop-days">1 день</span><h3>Заявка и договор</h3><p>Обсуждаем бюджет и пожелания, подписываем договор в офисе.</p></li>
+        <li><span class="stop-days">3–10 дней</span><h3>Поиск и покупка</h3><p>Присылаем лоты с переводом аукционного листа. Покупаем после вашего «да».</p></li>
+        <li><span class="stop-days">7–14 дней</span><h3>Порт и море</h3><p>Машина едет в порт и уходит судном во Владивосток.</p></li>
+        <li><span class="stop-days">5–10 дней</span><h3>Таможня</h3><p>Пошлина, утильсбор, СБКТС и электронный ПТС.</p></li>
+        <li><span class="stop-days">7–12 дней</span><h3>Дорога в Якутск</h3><p>Автовоз или перегон из Владивостока до Якутска.</p></li>
+        <li class="stop-end"><span class="stop-days">день выдачи</span><h3>Ключи у вас</h3><p>Осматриваете машину и забираете с полным пакетом документов.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="calc" id="calc">
+    <div class="wrap">
+      <h2>Сколько выйдет под ключ</h2>
+      <p class="section-lead">Введите данные машины — посчитаем пошлину, сборы и доставку до Якутска. Это предварительный расчёт, точную сумму подтвердит менеджер.</p>
+
+      <div class="calc-grid">
+        <form class="calc-form" id="calcForm" onsubmit="return false">
+          <div class="field">
+            <span class="field-label" id="cFromLabel">Страна</span>
+            <div class="chips" role="group" aria-labelledby="cFromLabel" data-calc="from">
+              <button type="button" class="chip is-on" data-v="jp" aria-pressed="true">Япония</button>
+              <button type="button" class="chip" data-v="cn" aria-pressed="false">Китай</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cPrice">Цена машины, <span id="cCur">иены</span></label>
+            <input id="cPrice" inputmode="numeric" autocomplete="off" value="2 300 000">
+            <p class="field-note" id="cPriceRub"></p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="cYear">Год выпуска</label>
+              <select id="cYear"></select>
+            </div>
+            <div class="field">
+              <label for="cCc">Объём, см³</label>
+              <input id="cCc" inputmode="numeric" autocomplete="off" value="1500">
+            </div>
+            <div class="field">
+              <label for="cHp">Мощность, л.с.</label>
+              <input id="cHp" inputmode="numeric" autocomplete="off" value="106">
+            </div>
+          </div>
+          <p class="rates" id="rates">Курс: загружаем…</p>
+        </form>
+
+        <div class="sheet receipt" aria-live="polite">
+          <div class="sheet-head"><h3>Расчёт</h3></div>
+          <dl id="receipt"></dl>
+          <div class="total">
+            <span>Итого в Якутске</span>
+            <strong id="total">—</strong>
+          </div>
+          <p class="warn" id="calcWarn" hidden></p>
+          <a class="btn btn-wa btn-wide" id="calcSend" href="#">Отправить расчёт в WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="done" id="privezli">
+    <div class="wrap">
+      <h2>Уже в Якутске</h2>
+      <p class="section-lead">Примеры карточек. На рабочем сайте здесь будут ваши машины из Instagram — с фото выдачи, сроком и итоговой ценой.</p>
+      <div class="cases" id="cases"></div>
+    </div>
+  </section>
+
+  <section class="faq" id="voprosy">
+    <div class="wrap faq-grid">
+      <div>
+        <h2>О чём спрашивают чаще всего</h2>
+        <p class="section-lead">Ответы на вопросы, которые менеджер сейчас набирает вручную по несколько раз в день.</p>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>Какая у вас комиссия?</summary>
+          <p>Комиссия фиксированная и прописана в договоре. Она не зависит от цены машины, поэтому нам нет смысла предлагать вариант подороже.</p>
+        </details>
+        <details>
+          <summary>Почему все ищут машины до 160 л.с.?</summary>
+          <p>Для машин до 160 л.с. и до 3 литров утильсбор льготный — 3 400 или 5 200 ₽. Если мощность выше, сбор считается по коммерческой ставке и добавляет к цене сотни тысяч рублей. Калькулятор выше учитывает это сам.</p>
+        </details>
+        <details>
+          <summary>Как и когда платить?</summary>
+          <p>Поэтапно: предоплата перед торгами, оплата машины после покупки, таможенные платежи — когда машина придёт во Владивосток. На каждый платёж вы получаете подтверждающие документы.</p>
+        </details>
+        <details>
+          <summary>А если машина придёт не такой, как на фото?</summary>
+          <p>До покупки переводим аукционный лист: оценка кузова и салона, пробег, замечания эксперта. Покупаем только после того, как вы согласуете конкретный лот.</p>
+        </details>
+        <details>
+          <summary>Сколько ждать?</summary>
+          <p>Обычно 35–50 дней от договора до выдачи. Зимой дорога из Владивостока может занять на несколько дней больше.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakty">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Расскажите, какую машину хотите</h2>
+        <p class="section-lead">Ответим в WhatsApp, пришлём лоты под ваш бюджет и посчитаем каждый.</p>
+        <a class="btn btn-wa btn-big" data-wa="Здравствуйте! Хочу авто под заказ. Бюджет и пожелания: " href="#">Написать в WhatsApp</a>
+      </div>
+      <address class="sheet contacts">
+        <dl>
+          <dt>Офис</dt><dd>Якутск, 203 микрорайон, корпус 21</dd>
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/79644291289">+7 964 429-12-89</a></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/didi.auto_/" rel="noopener">@didi.auto_</a></dd>
+        </dl>
+      </address>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Di-Di Auto. Авто под заказ из Японии и Китая, Якутск.</p>
+    <p class="credits">Фото в демо — Wikimedia Commons (CC BY-SA 4.0, CC0): Tokumeigakarinoaoshima, Alexander-93, Ominae, MercurySable99, Nissangeniss, メイド理世, User3204.</p>
+  </div>
+</footer>
+
+<a class="sticky-wa" data-wa="Здравствуйте! Хочу авто под заказ, подскажите с чего начать." href="#">Написать в WhatsApp</a>
+
+<script src="app.js"></script>
+</body>
+</html>
